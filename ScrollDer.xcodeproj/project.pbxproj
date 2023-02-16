@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		19BFC3B4299DF81300F0BF9C /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BFC3B3299DF81300F0BF9C /* Styles.swift */; };
 		19E7C36A299C81A600711F23 /* ScrollDerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E7C369299C81A600711F23 /* ScrollDerApp.swift */; };
 		19E7C36C299C81A600711F23 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E7C36B299C81A600711F23 /* ContentView.swift */; };
 		19E7C36E299C81A900711F23 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19E7C36D299C81A900711F23 /* Assets.xcassets */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		19BFC3B3299DF81300F0BF9C /* Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
 		19E7C366299C81A600711F23 /* ScrollDer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScrollDer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19E7C369299C81A600711F23 /* ScrollDerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollDerApp.swift; sourceTree = "<group>"; };
 		19E7C36B299C81A600711F23 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -53,6 +55,7 @@
 			children = (
 				19E7C369299C81A600711F23 /* ScrollDerApp.swift */,
 				19E7C36B299C81A600711F23 /* ContentView.swift */,
+				19BFC3B3299DF81300F0BF9C /* Styles.swift */,
 				19E7C36D299C81A900711F23 /* Assets.xcassets */,
 				19E7C36F299C81A900711F23 /* Preview Content */,
 			);
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19BFC3B4299DF81300F0BF9C /* Styles.swift in Sources */,
 				19E7C36C299C81A600711F23 /* ContentView.swift in Sources */,
 				19E7C36A299C81A600711F23 /* ScrollDerApp.swift in Sources */,
 			);
