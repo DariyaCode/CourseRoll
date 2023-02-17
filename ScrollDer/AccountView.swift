@@ -83,12 +83,10 @@ struct AccountView: View {
                     Button(action: {isDeleted = true})
                     {
                         Label("Delete", systemImage: "trash")
-                    }
+            
+                    Button()
                     .tint(.red)
-                    Button {} label: {
-                        Label("Pin", systemImage: "pin")
-                    }
-                    .tint(.yellow)
+                    
                 }
             }
             Link(destination: URL(string: "https://youtube.com")!) {
@@ -103,6 +101,18 @@ struct AccountView: View {
         .foregroundColor(.primary)
         .listRowSeparator(.hidden)
         
+    }
+    
+    var pinButton: some View{
+        Button { isPinned.toggle() } label: {
+            if isPinned{
+                Label("Unpin", systemImage: "pin.slash")
+            }
+            else{
+                Label("Pin", systemImage: "pin")
+            }
+        }
+        .tint(isPinned ? .gray : .yellow)
     }
 }
 
