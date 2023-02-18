@@ -34,10 +34,7 @@ struct AccountView: View {
                 .foregroundStyle(.blue, .blue.opacity(0.3))
                 .padding()
                 .background(Circle().fill(.ultraThinMaterial))
-                .background(Image(systemName: "hexagon")
-                    .symbolVariant(.fill)
-                    .foregroundStyle(.blue)
-                    .font(.system(size: 200))
+                .background(HexagonStyle()
                     .offset(x: -50, y: -100)
                 )
             Text("Dariya Gecher")
@@ -83,10 +80,9 @@ struct AccountView: View {
                     Button(action: {isDeleted = true})
                     {
                         Label("Delete", systemImage: "trash")
-            
-                    Button()
+                    }
                     .tint(.red)
-                    
+                    pinButton
                 }
             }
             Link(destination: URL(string: "https://youtube.com")!) {
