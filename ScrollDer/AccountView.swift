@@ -34,8 +34,10 @@ struct AccountView: View {
                 .foregroundStyle(.blue, .blue.opacity(0.3))
                 .padding()
                 .background(Circle().fill(.ultraThinMaterial))
-                .background(HexagonStyle()
-                    .offset(x: -50, y: -100)
+                .background(
+                    BlobView()
+                        .offset(x: 200, y: 0)
+                        .scaleEffect(0.6)
                 )
             Text("Dariya Gecher")
                 .font(.title.weight(.semibold))
