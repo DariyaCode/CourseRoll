@@ -14,19 +14,20 @@ struct TabBar: View {
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .offset(y: 300)
             HStack {
-                Spacer()
-                
+                ForEach(tabItems) { item in
                     VStack(spacing: 0) {
-                        Image(systemName: "house")
+                        Image(systemName: item.icon)
                             .symbolVariant(.fill)
                             .font(.body.bold())
                             .frame(width: 44, height: 29)
-                        Text("Learn Now!")
+                        Text(item.text)
                             .font(.caption2)
-                    
-                    Spacer()
+                            .lineLimit(1)
+                    }
+                    .frame(maxWidth: .infinity)
                 }
             }
+            .padding(.horizontal, 8)
             .padding(.top, 14)
             .frame(height: 88, alignment: .top)
             .background(.ultraThinMaterial, in:

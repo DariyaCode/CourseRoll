@@ -10,6 +10,7 @@
 		19628BE829A0B1240053F553 /* HexagonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19628BE729A0B1240053F553 /* HexagonStyle.swift */; };
 		19628BEA29A13F630053F553 /* BlobView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19628BE929A13F630053F553 /* BlobView.swift */; };
 		19628BEC29A160420053F553 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19628BEB29A160420053F553 /* TabBar.swift */; };
+		19628BEE29A171FC0053F553 /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19628BED29A171FC0053F553 /* Tab.swift */; };
 		19BFC3B4299DF81300F0BF9C /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BFC3B3299DF81300F0BF9C /* Styles.swift */; };
 		19C5FD0B299E145A003FF216 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C5FD0A299E145A003FF216 /* AccountView.swift */; };
 		19E7C36A299C81A600711F23 /* ScrollDerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E7C369299C81A600711F23 /* ScrollDerApp.swift */; };
@@ -22,6 +23,7 @@
 		19628BE729A0B1240053F553 /* HexagonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexagonStyle.swift; sourceTree = "<group>"; };
 		19628BE929A13F630053F553 /* BlobView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlobView.swift; sourceTree = "<group>"; };
 		19628BEB29A160420053F553 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
+		19628BED29A171FC0053F553 /* Tab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
 		19BFC3B3299DF81300F0BF9C /* Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
 		19C5FD0A299E145A003FF216 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		19E7C366299C81A600711F23 /* ScrollDer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScrollDer.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -66,6 +68,7 @@
 				19BFC3B3299DF81300F0BF9C /* Styles.swift */,
 				19C5FD0A299E145A003FF216 /* AccountView.swift */,
 				19628BEB29A160420053F553 /* TabBar.swift */,
+				19628BED29A171FC0053F553 /* Tab.swift */,
 				19628BE929A13F630053F553 /* BlobView.swift */,
 				19628BE729A0B1240053F553 /* HexagonStyle.swift */,
 				19E7C36D299C81A900711F23 /* Assets.xcassets */,
@@ -155,6 +158,7 @@
 				19C5FD0B299E145A003FF216 /* AccountView.swift in Sources */,
 				19BFC3B4299DF81300F0BF9C /* Styles.swift in Sources */,
 				19E7C36C299C81A600711F23 /* ContentView.swift in Sources */,
+				19628BEE29A171FC0053F553 /* Tab.swift in Sources */,
 				19628BEA29A13F630053F553 /* BlobView.swift in Sources */,
 				19E7C36A299C81A600711F23 /* ScrollDerApp.swift in Sources */,
 				19628BE829A0B1240053F553 /* HexagonStyle.swift in Sources */,
