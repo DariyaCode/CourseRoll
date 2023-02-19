@@ -12,13 +12,14 @@ struct TableItem: Identifiable {
     var text: String
     var icon: String
     var tab: Tab
+    var color: Color
 }
 
 var tabItems = [
-    TableItem(text: "Learn now!", icon: "house", tab: .home),
-    TableItem(text: "Explore", icon: "magnifyingglass", tab: .explore),
-    TableItem(text: "Notifications", icon: "bell", tab: .notifications),
-    TableItem(text: "Library", icon: "rectangle.stack", tab: .library),
+    TableItem(text: "Learn now!", icon: "house", tab: .home, color: .teal),
+    TableItem(text: "Explore", icon: "magnifyingglass", tab: .explore, color: .blue),
+    TableItem(text: "Notifications", icon: "bell", tab: .notifications, color: .red),
+    TableItem(text: "Library", icon: "rectangle.stack", tab: .library, color: .pink),
 ]
 
 enum Tab: String{
@@ -26,4 +27,11 @@ enum Tab: String{
     case explore
     case notifications
     case library
+}
+
+struct TabPreferenceKey: PreferenceKey{
+    static var defaultValue: CGFloat = 0
+    static func reduce(value: inout CGFloat, nextValue: () -> CGFloat) {
+        value = nextValue()
+    }
 }
