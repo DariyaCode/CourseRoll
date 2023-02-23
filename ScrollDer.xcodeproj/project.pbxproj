@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		194A631629A74BF600981F2F /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194A631529A74BF600981F2F /* Course.swift */; };
+		194A631829A776DD00981F2F /* MatchedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194A631729A776DD00981F2F /* MatchedView.swift */; };
 		19628BE829A0B1240053F553 /* HexagonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19628BE729A0B1240053F553 /* HexagonStyle.swift */; };
 		19628BEA29A13F630053F553 /* BlobView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19628BE929A13F630053F553 /* BlobView.swift */; };
 		19628BEC29A160420053F553 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19628BEB29A160420053F553 /* TabBar.swift */; };
@@ -27,6 +28,7 @@
 
 /* Begin PBXFileReference section */
 		194A631529A74BF600981F2F /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
+		194A631729A776DD00981F2F /* MatchedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchedView.swift; sourceTree = "<group>"; };
 		19628BE729A0B1240053F553 /* HexagonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexagonStyle.swift; sourceTree = "<group>"; };
 		19628BE929A13F630053F553 /* BlobView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlobView.swift; sourceTree = "<group>"; };
 		19628BEB29A160420053F553 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 			children = (
 				19E8D3A329A221650032CC7D /* HomeView.swift */,
 				19C5FD0A299E145A003FF216 /* AccountView.swift */,
+				194A631729A776DD00981F2F /* MatchedView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -217,6 +220,7 @@
 				19C5FD0B299E145A003FF216 /* AccountView.swift in Sources */,
 				19BFC3B4299DF81300F0BF9C /* Styles.swift in Sources */,
 				19E7C36C299C81A600711F23 /* ContentView.swift in Sources */,
+				194A631829A776DD00981F2F /* MatchedView.swift in Sources */,
 				19628BEE29A171FC0053F553 /* Tab.swift in Sources */,
 				19B66D5529A3643600573BB2 /* NavigationBar.swift in Sources */,
 				19628BEA29A13F630053F553 /* BlobView.swift in Sources */,
