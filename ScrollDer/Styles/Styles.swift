@@ -16,7 +16,7 @@ struct StrokeStyle: ViewModifier{
                 cornerRadius: cornerRadius, style: .continuous).stroke(
                     LinearGradient(
                         colors: [
-                            .white.opacity(colorScheme == .dark ? 0.6 : 0.3),
+                            .white.opacity(colorScheme == .dark ? 0.1 : 0.3),
                             .black.opacity( colorScheme == .dark ? 0.3 : 0.1)
                         ], startPoint: .top, endPoint: .bottom)
                     .blendMode(.overlay))
