@@ -17,7 +17,14 @@ struct HomeView: View {
             }
             .frame(height: 0)
             
-            FeaturedItem()
+            TabView {
+                ForEach(courses) { item in
+                    FeaturedItem(course: item)
+                }
+            }
+            .tabViewStyle(.page(indexDisplayMode: .never))
+            .frame(height: 430)
+            .background(Image("Blob 1").offset(x: 250, y: -100))
             
             Color.clear.frame(height: 1000)
         }
