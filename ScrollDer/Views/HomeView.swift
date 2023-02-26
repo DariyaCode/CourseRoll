@@ -12,6 +12,7 @@ struct HomeView: View {
     @Namespace var namespace
     @State var show = false
     @State var showStatusBar = true
+    @State var selectedID = UUID()
     
     var body: some View {
         ZStack {
@@ -30,14 +31,17 @@ struct HomeView: View {
                     .padding(.horizontal, 20)
                 
                 if !show{
-                    ForEach(courses) { course in
-                        CourseItem(namespace: namespace, show: $show)
-                            .onTapGesture {
-                                withAnimation(.openCard){
-                                    show.toggle()
-                                    showStatusBar = false
-                                }
-                        }
+                    cards
+                }
+                else{
+                    ForEach(courses){ course in
+                        Rectangle()
+                            .fill(.white)
+                            .frame(height: 300)
+                            .cornerRadius(30)
+                            .shadow(color: Color("Shadow"), radius: 20, x: 0, y: 10)
+                            .opacity(0.3)
+                            .padding(.horizontal, 30)
                     }
                 }
             }
@@ -49,11 +53,8 @@ struct HomeView: View {
                 NavigationBar(title: "Home", hasScrolled: $hasScrolled)
             )
             if show{
-                CourseView(namespace: namespace, show: $show)
-                    .zIndex(1)
-                    .transition(.asymmetric(
-                        insertion: .opacity.animation(.easeInOut(duration: 0.1)),
-                        removal: .opacity.animation(.easeInOut(duration: 0.3).delay(0.2))))
+                
+                detail
             }
         }
         .statusBar(hidden: !showStatusBar)
@@ -68,22 +69,22 @@ struct HomeView: View {
         }
     }
     
-    var scrollDetection: some View{
-        GeometryReader{ proxy in
-            Color.clear.preference(key: ScrollPreferenceKey.self, value: proxy.frame(in: .named("scroll")).minY)
-        }
-        .frame(height: 0)
-        .onPreferenceChange(ScrollPreferenceKey.self, perform: { value in
-            
-            withAnimation(.easeInOut) {
-                if value < 0{
-                    hasScrolled = true
-                } else{
-                    hasScrolled = false
-                }
-            }
-        })
+var scrollDetection: some View{
+    GeometryReader{ proxy in
+        Color.clear.preference(key: ScrollPreferenceKey.self, value: proxy.frame(in: .named("scroll")).minY)
     }
+    .frame(height: 0)
+    .onPreferenceChange(ScrollPreferenceKey.self, perform: { value in
+        
+        withAnimation(.easeInOut) {
+            if value < 0{
+                hasScrolled = true
+            } else{
+                hasScrolled = false
+            }
+        }
+    })
+}
     
     var featured: some View {
         
@@ -113,6 +114,31 @@ struct HomeView: View {
         .tabViewStyle(.page(indexDisplayMode: .never))
         .frame(height: 430)
         .background(Image("Blob 1").offset(x: 250, y: -100))
+    }
+    
+    
+    var cards: some View{
+        ForEach(courses) { course in
+            CourseItem(namespace: namespace, course: course, show: $show)
+                .onTapGesture {
+                    withAnimation(.openCard){
+                        show.toggle()
+                        showStatusBar = false
+                        selectedID = course.id
+                    }
+                }
+        }
+    }
+    var detail: some View{
+        ForEach(courses) { course in
+            if course.id == selectedID{
+                CourseView(namespace: namespace, course: course, show: $show)
+                    .zIndex(1)
+                    .transition(.asymmetric(
+                        insertion: .opacity.animation(.easeInOut(duration: 0.1)),
+                        removal: .opacity.animation(.easeInOut(duration: 0.3).delay(0.2))))
+            }
+        }
     }
 }
 
