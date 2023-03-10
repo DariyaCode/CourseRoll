@@ -24,6 +24,14 @@ struct SearchView: View {
                 .strokeStyle(cornerRadius: 30)
                 .padding(20)
                 .background(
+                    Rectangle()
+                        .fill(.regularMaterial)
+                        .frame(height: 200)
+                        .frame(maxHeight: .infinity, alignment: .top)
+                        .blur(radius: 20)
+                        .offset(y: -200)
+                )
+                .background(
                     Image("Blob 1").offset(x: -100, y: -200)
                 )
             }
@@ -60,6 +68,8 @@ struct SearchView: View {
                     Text(item.text)
                         .font(.footnote)
                         .foregroundColor(.secondary)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .multilineTextAlignment(.leading)
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
             }
