@@ -17,8 +17,10 @@ struct SearchView: View {
                 VStack {
                     content
                 }
+                .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(20)
-                .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 30, style: .continuous))
+                .background(.ultraThinMaterial, in:
+                                RoundedRectangle(cornerRadius: 30, style: .continuous))
                 .strokeStyle(cornerRadius: 30)
                 .padding(20)
                 .background(
@@ -26,8 +28,8 @@ struct SearchView: View {
                 )
             }
             .searchable(text: $text, placement:
-                    .navigationBarDrawer(displayMode: .always), prompt:
-                            Text("SwiftUI, React, UI Design")){
+                .navigationBarDrawer(displayMode: .always), prompt:
+                Text("SwiftUI, React, UI Design")) {
                 ForEach(suggestions){ suggestion in
                     Button {
                         text = suggestion.text
@@ -37,17 +39,16 @@ struct SearchView: View {
                     }
                 }
             }
-                            .navigationTitle("Search")
-                            .navigationBarTitleDisplayMode(.inline)
-                            .navigationBarItems(trailing: Button {
-                                presentationMode.wrappedValue.dismiss() } label: {
-                                    Text("Done").bold() })
+            .navigationTitle("Search")
+            .navigationBarTitleDisplayMode(.inline)
+            .navigationBarItems(trailing: Button {
+                presentationMode.wrappedValue.dismiss() } label: {
+                    Text("Done").bold() })
         }
     }
-    
     var content: some View{
         ForEach(courses.filter{ $0.title.contains(text) || text == "" }) { item in
-            HStack(alignment: .top, spacing: 12){
+            HStack(alignment: .top, spacing: 12) {
                 Image(item.image)
                     .resizable()
                     .aspectRatio(contentMode: .fill)
@@ -60,13 +61,13 @@ struct SearchView: View {
                         .font(.footnote)
                         .foregroundColor(.secondary)
                 }
+                .frame(maxWidth: .infinity, alignment: .leading)
             }
             .padding(.vertical, 4)
             .listRowSeparator(.hidden)
         }
     }
 }
-
 struct SearchView_Previews: PreviewProvider {
     static var previews: some View {
         SearchView()
